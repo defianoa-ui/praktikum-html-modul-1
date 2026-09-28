@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        fieldset {
+            width: 480px;
+            border: 1px solid #777;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        legend {
+            font-size: 13px;
+            padding: 0 5px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            padding: 3px 0;
+            vertical-align: top;
+            font-size: 13px;
+        }
+
+        td:first-child {
+            width: 170px;
+        }
+
+        td:nth-child(2) {
+            width: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="url"],
+        textarea,
+        select {
+            font-family: inherit;
+            font-size: 12px;
+            padding: 2px 4px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="url"] {
+            width: 200px;
+        }
+
+        textarea {
+            width: 220px;
+            height: 60px;
+            resize: both;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        .buttons input, .buttons button {
+            padding: 2px 8px;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+
+        .checkbox-group label {
+            margin-right: 8px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Registrasi</h2>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+        
+        <!-- BIODATA -->
+        <fieldset>
+            <legend>Biodata</legend>
+            <table>
+                <tr>
+                    <td>Nama Mahasiswa</td>
+                    <td>:</td>
+                    <td><input type="text" name="nama" placeholder="Nama Anda"></td>
+                </tr>
+                <tr>
+                    <td>No Induk Mahasiswa (NIM)</td>
+                    <td>:</td>
+                    <td><input type="text" name="nim" value="123456789"></td>
+                </tr>
+                <tr>
+                    <td>Alamat Mahasiswa</td>
+                    <td>:</td>
+                    <td><textarea name="alamat" placeholder="Alamat Anda"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td>
+                        <select name="tgl">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <!-- Tambahkan opsi lainnya jika perlu -->
+                        </select>
+                        <select name="bln">
+                            <option value="Januari">Januari</option>
+                            <option value="Februari">Februari</option>
+                            <option value="Maret">Maret</option>
+                            <!-- Tambahkan opsi lainnya jika perlu -->
+                        </select>
+                        <select name="thn">
+                            <option value="1990">1990</option>
+                            <option value="1991">1991</option>
+                            <option value="2000">2000</option>
+                            <!-- Tambahkan opsi lainnya jika perlu -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <label><input type="radio" name="jk" value="Pria" checked> Pria</label>
+                        <label><input type="radio" name="jk" value="Wanita"> Wanita</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload Foto</td>
+                    <td>:</td>
+                    <td><input type="file" name="foto"></td>
+                </tr>
+                <tr>
+                    <td>URL Website</td>
+                    <td>:</td>
+                    <td><input type="url" name="url_website" placeholder="URL Website Anda"></td>
+                </tr>
+                <tr>
+                    <td>Perguruan Tinggi</td>
+                    <td>:</td>
+                    <td><input type="text" name="perguruan_tinggi"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- INFO AKUN -->
+        <fieldset>
+            <legend>Info Akun</legend>
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td><input type="email" name="email" placeholder="Email Anda"></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td>:</td>
+                    <td><input type="text" name="username" placeholder="Username Anda"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>:</td>
+                    <td><input type="password" name="password" placeholder="Password Anda"></td>
+                </tr>
+                <tr>
+                    <td>Ulangi Password</td>
+                    <td>:</td>
+                    <td><input type="password" name="ulang_password" placeholder="Password Anda"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- KEMAMPUAN DASAR -->
+        <fieldset>
+            <legend>Kemampuan Dasar</legend>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="skill[]" value="HTML"> HTML</label>
+                <label><input type="checkbox" name="skill[]" value="CSS"> CSS</label>
+                <label><input type="checkbox" name="skill[]" value="Javascript"> Javascript</label>
+                <label><input type="checkbox" name="skill[]" value="PHP"> PHP</label>
+                <label><input type="checkbox" name="skill[]" value="MySQL"> MySQL</label>
+                <label><input type="checkbox" name="skill[]" value="Laravel"> Laravel</label>
+                <label><input type="checkbox" name="skill[]" value="React Native"> React Native</label>
+            </div>
+        </fieldset>
+
+        <!-- TOMBOL -->
+        <div class="buttons">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Simpan">
+            <button type="button">Button</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
